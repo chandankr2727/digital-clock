@@ -60,7 +60,7 @@ function clock(){
         display.style.display="block"
         display.innerText="Good Evening !!" 
     }
-
+    document.getElementById("image").style.backgroundRepeat="no-repeat"
     // display image
     if (arr[0]==hrs+ampm) {
         document.getElementById("image").style.backgroundImage ="url(./images/wake-up-img.png) "
