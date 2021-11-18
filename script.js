@@ -3,7 +3,6 @@ function set(){
     arr[0]=document.getElementById("wakeup").value
     arr[1]=document.getElementById("lunch").value
     arr[2]=document.getElementById("nap").value
-    setInterval(popx,2100)
     pop()
     }
     document.getElementById("btn").addEventListener("click",set);
@@ -70,12 +69,13 @@ function clock(){
     }
     if (arr[2]==hrs+ampm) {
         document.getElementById("image").style.backgroundImage="url(./images/good-night-img.png)"
-    } 
+    }
 }
 clock()
 
 function pop(){
     document.getElementById("popup").style.display="block"
+    setTimeout(popx,3000)
 }
 function popx(){
     document.getElementById("popup").style.display="none"
