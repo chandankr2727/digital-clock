@@ -3,7 +3,17 @@ function set(){
     arr[0]=document.getElementById("wakeup").value
     arr[1]=document.getElementById("lunch").value
     arr[2]=document.getElementById("nap").value
-    pop()
+
+    var sel = document.getElementById("wakeup").options[wakeup.selectedIndex].innerText
+
+    var sel2 = document.getElementById("lunch").options[lunch.selectedIndex].innerText
+
+    var sel3 = document.getElementById("nap").options[nap.selectedIndex].innerText
+
+    document.getElementById("setdisplay").style.display="block"
+    document.getElementById("wakeuptime").innerText="Wake up Time is: "+ sel
+    document.getElementById("lunchtime").innerText="Lunch Time is:    "+ sel2
+    document.getElementById("naptime").innerText="Nap Time is:       "+ sel3
     }
     document.getElementById("btn").addEventListener("click",set);
 function clock(){
@@ -72,14 +82,6 @@ function clock(){
     }
 }
 clock()
-
-function pop(){
-    document.getElementById("popup").style.display="block"
-    setTimeout(popx,3000)
-}
-function popx(){
-    document.getElementById("popup").style.display="none"
-}
 
 
 
