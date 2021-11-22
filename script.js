@@ -9,11 +9,11 @@ function set(){
     var sel2 = document.getElementById("lunch").options[lunch.selectedIndex].innerText
 
     var sel3 = document.getElementById("nap").options[nap.selectedIndex].innerText
-
+    var array=[]
     document.getElementById("setdisplay").style.display="block"
-    document.getElementById("wakeuptime").innerText="Wake up Time is: "+ sel
-    document.getElementById("lunchtime").innerText="Lunch Time is:    "+ sel2
-    document.getElementById("naptime").innerText="Nap Time is:       "+ sel3
+    document.getElementById("wakeuptime").innerText="Wake up Time is : - "+ sel
+    document.getElementById("lunchtime").innerText="Lunch Time is :  -  "+ sel2
+    document.getElementById("naptime").innerText="Nap Time is : - "  + sel3
     }
     document.getElementById("btn").addEventListener("click",set);
 function clock(){
@@ -73,6 +73,9 @@ function clock(){
     // display image
     if (arr[0]==hrs+ampm) {
         document.getElementById("image").style.backgroundImage ="url(./images/wake-up-img.png) "
+    }else{
+        document.getElementById("image").style.backgroundImage ="url(./images/default.png) "
+        
     }
     if (arr[1]==hrs+ampm) {
         document.getElementById("image").style.backgroundImage ="url(./images/lunch-time-img.png)"
